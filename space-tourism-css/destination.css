@@ -235,11 +235,12 @@ ul li:hover {
   body {
     width: 100%;
     background-image: url(/assets/destination/background-destination-mobile.jpg);
-    background-position: center;
-    background-size: cover;
+    background-position: top center;
+    background-size: 100vw auto;
     background-repeat: no-repeat;
     margin: 0;
     position: relative;
+    overflow: scroll;
   }
   .nav {
     display: none;

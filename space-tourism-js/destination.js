@@ -28,13 +28,17 @@ function changeImage(newImageSrc) {
 
 // moon.textContent = "Jupiter";
 moon.addEventListener("click", function (e) {
-  moon.classList.add("current");
   planet.textContent = "MOON";
   planetMessage.textContent =
     "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites. Avg. distance 384,400 km Est. travel time 3 days";
   kilometers.textContent = "384,400 KM";
   months.textContent = "3 DAYS";
   changeImage("/assets/destination/image-moon.png");
+
+  moon.classList.add("current");
+  mars.classList.remove("current");
+  europa.classList.remove("current");
+  titan.classList.remove("current");
 });
 
 mars.addEventListener("click", function (e) {
@@ -45,6 +49,9 @@ mars.addEventListener("click", function (e) {
   kilometers.textContent = "225 MIL. KM";
   months.textContent = "9 MONTHS";
   changeImage("/assets/destination/image-mars.png");
+  europa.classList.remove("current");
+  moon.classList.remove("current");
+  titan.classList.remove("current");
 });
 
 europa.addEventListener("click", function (e) {
@@ -55,6 +62,9 @@ europa.addEventListener("click", function (e) {
   kilometers.textContent = "628 MIL. KM";
   months.textContent = "3 YEARS";
   changeImage("/assets/destination/image-europa.png");
+  mars.classList.remove("current");
+  moon.classList.remove("current");
+  titan.classList.remove("current");
 });
 
 titan.addEventListener("click", function (e) {
@@ -65,4 +75,7 @@ titan.addEventListener("click", function (e) {
   kilometers.textContent = "1.6 BIL. KM";
   months.textContent = "7 YEARS";
   changeImage("/assets/destination/image-titan.png");
+  moon.classList.remove("current");
+  moon.classList.remove("current");
+  europa.classList.remove("current");
 });
