@@ -164,6 +164,7 @@ main {
   }
   .para {
     font-size: 15px;
+    line-height: 25px;
   }
   .right {
     margin-top: 3%;
