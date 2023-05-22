@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400&family=Barlow:wght@100;200;300;400;500&family=Bellefair&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bellefair", Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(54, 54, 93);
+  background-image: url(/assets/technology/background-technology-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  /* overflow: hidden; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+header img {
+  margin-top: 5%;
+  margin-left: 3%;
+  height: 48px;
+  width: 48px;
+}
+header::after {
+  content: " ";
+  width: 35%;
+  height: 1px;
+  background-color: gray;
+  left: 11%;
+  top: 70%;
+  position: absolute;
+  z-index: 2;
+}
+ul {
+  width: 57%;
+  height: 85px;
+  padding: 30px;
+  font-size: 28px;
+  background-color: rgb(255, 255, 255, 4%);
+  margin-top: 3%;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+ul li {
+  display: inline;
+  margin: 0 20px;
+  position: relative;
+  font-family: "Barlow Condensed";
+  font-size: 18px;
+}
+ul li:last-child {
+  margin-right: 25%;
+}
+
+ul li a::after {
+  content: " ";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: -30px;
+  background-color: white;
+  left: 0;
+  transition: 0.5s;
+}
+
+ul li a.active::after {
+  height: 3px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Barlow Condensed";
+  font-size: 18px;
+}
+
+ul li a span {
+  font-family: "Barlow Condensed";
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 6px;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 5% 0 5% 10%;
+  /* overflow: hidden; */
+}
+.pars {
+  font-size: 28px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.pars-mobile {
+  display: none;
+}
+.pars span {
+  color: #d0d6f9;
+  opacity: 0.5;
+}
+.left {
+  margin-right: 10%;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 32px;
+}
+
+.circle:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.flex-left {
+  display: flex;
+  margin-top: 20%;
+  gap: 30px;
+}
+
+.one {
+  /* margin-top: 25%; */
+  color: #d0d6f9;
+  font-size: 16px;
+  padding-bottom: 5px;
+  font-family: "barlow";
+}
+
+.two {
+  font-size: 56px;
+  padding-top: 5px;
+  color: white;
+  font-family: "Bellefair";
+  white-space: nowrap;
+}
+
+.three {
+  width: 450px;
+  color: #d0d6f9;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: "barlow";
+}
+
+.right {
+  /* flex: 1; */
+  margin-left: 20%;
+  width: 100%;
+  margin-top: 4%;
+}
+
+.right img {
+  height: 400px;
+  margin-left: 18%;
+}
+#ham {
+  display: none;
+}
+#close {
+  display: none;
+}
+@media screen and (max-width: 1115px) {
+  section {
+    width: 90%;
+    margin: 5%;
+  }
+  .nav {
+    padding: 15px 0 7px 10px;
+    width: 65%;
+  }
+  .nav li {
+    margin: 0 1%;
+  }
+  .left {
+    width: 40%;
+  }
+  .right {
+    width: 49%;
+  }
+  .two {
+    font-size: 25px;
+  }
+  .three {
+    font-size: 15px;
+  }
+  section {
+    margin-top: 6%;
+  }
+  .nav li a {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    width: 100%;
+    background-image: url(/assets/technology/background-technology-mobile.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    position: relative;
+    height: 100vh;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    margin-top: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+  }
+  .hidden {
+    display: block;
+  }
+  .nav li {
+    display: block;
+    margin: 20% 5%;
+    backdrop-filter: none;
+    background-color: transparent;
+  }
+  .nav li a {
+    font-size: 17px;
+  }
+  #ham {
+    display: block;
+    margin-right: 20px;
+    width: 39px;
+    height: 34px;
+    margin-top: 7%;
+    cursor: pointer;
+  }
+  header::after {
+    height: 0;
+  }
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    width: 100%;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+  }
+  .flex-left {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+    gap: 30px;
+  }
+
+  .left-left {
+    display: flex;
+    /* position: absolute; */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+  }
+  /* .left {
+    width: 100%;
+    text-align: center;
+    padding: 0 6%;
+    margin-top: 7%;
+  } */
+  .two {
+    font-size: 30px;
+  }
+  .three {
+    width: 100%;
+    color: #d0d6f9;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 32px;
+    font-family: "barlow";
+  }
+  .para {
+    font-size: 13px;
+  }
+  /* .right {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .right img {
+    width: 100%;
+    height: 350px;
+    border-radius: 0;
+    margin: 0;
+  } */
+  .right {
+    /* flex: 1; */
+    margin-left: 0%;
+    width: 100%;
+    margin-top: 4%;
+  }
+
+  .right img {
+    height: 350px;
+    margin-left: 0px;
+  }
+  .pars {
+    display: none;
+  }
+  .pars-mobile {
+    display: block;
+    font-size: 28px;
+    font-family: "Barlow Condensed", sans-serif;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .pars-mobile span {
+    color: #d0d6f9;
+    opacity: 0.5;
+  }
+  ul li a::after {
+    bottom: -10px;
+    width: 140px;
+  }
+  #close {
+    display: block;
+    float: right;
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .left img {
+    margin-top: 5%;
+  }
+  .marsp {
+    padding-bottom: 3%;
+    border-bottom: 1px solid gray;
+    color: gray;
+    font-size: 15px;
+  }
+}
