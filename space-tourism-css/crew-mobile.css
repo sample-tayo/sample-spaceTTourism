@@ -8,6 +8,7 @@
     margin: 0;
     position: relative;
     height: 100vh;
+    overflow: scroll;
   }
 
   .nav {
@@ -62,6 +63,7 @@
     font-family: "Bellefair", sans-serif;
     font-size: 16px;
     opacity: 0.5;
+    margin-top: 0%;
   }
   .three {
     font-size: 18px;
@@ -124,8 +126,8 @@
   }
 
   .right img {
-    height: 302px;
-    width: 257.12px;
+    height: 338px;
+    width: 70.7%;
     margin-top: 10%;
     position: relative;
     /* margin-left: 30px; */

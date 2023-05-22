@@ -181,8 +181,8 @@ main {
 }
 @media screen and (max-width: 1115px) {
   section {
-    width: 90%;
-    margin: 5%;
+    width: 100%;
+    margin: 0%;
   }
   .nav {
     padding: 15px 0 7px 10px;
@@ -215,11 +215,11 @@ main {
     width: 100%;
     background-image: url(/assets/technology/background-technology-mobile.jpg);
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   .nav {
@@ -265,7 +265,7 @@ main {
     align-items: center;
     justify-content: center;
     margin: 0px;
-    padding: 0px;
+    padding: 0px 5% 10% 5%;
     width: 100%;
     text-align: center;
   }
@@ -329,6 +329,7 @@ main {
 
   .right img {
     height: 350px;
+    width: 100%;
     margin-left: 0px;
   }
   .pars {
